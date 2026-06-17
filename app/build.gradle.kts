@@ -13,6 +13,21 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
+
+        // Inject Vercel proxy URL at build time
+        buildConfigField("String", "VERCEL_BASE_URL", "\"${project.findProperty("VERCEL_BASE_URL") ?: "https://hipenter-proxy.vercel.app"}\"")
+    }
+
+    signingConfigs {
+        create("release") {
+            val storeFilePath = System.getenv("SIGNING_KEYSTORE_PATH")
+            if (storeFilePath != null) {
+                storeFile = file(storeFilePath)
+                storePassword = System.getenv("SIGNING_STORE_PASSWORD")
+                keyAlias = System.getenv("SIGNING_KEY_ALIAS")
+                keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
@@ -28,7 +43,7 @@ android {
     buildFeatures {
       compose = true
       aidl = false
-      buildConfig = false
+      buildConfig = true
       shaders = false
     }
 
@@ -81,4 +96,19 @@ dependencies {
   implementation(libs.androidx.navigation3.ui)
   implementation(libs.androidx.navigation3.runtime)
   implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+
+  // HiPenter — Network
+  implementation(libs.okhttp)
+  implementation(libs.kotlinx.serialization.json)
+
+  // HiPenter — Auth (Credential Manager)
+  implementation(libs.androidx.credentials)
+  implementation(libs.androidx.credentials.play.services)
+  implementation(libs.google.id)
+
+  // HiPenter — Security (Encrypted SharedPreferences)
+  implementation(libs.androidx.security.crypto)
+
+  // HiPenter — Image loading (profile photos)
+  implementation(libs.coil.compose)
 }

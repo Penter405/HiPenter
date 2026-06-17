@@ -1,9 +1,9 @@
 # HiPenter — Build Task Tracker
 
 ## Phase 1: Theme & Branding
-- [ ] Update Color.kt with HiPenter palette
-- [ ] Update Type.kt with Inter + Outfit fonts
-- [ ] Update Theme.kt with custom color scheme
+- [x] Update Color.kt with HiPenter palette
+- [x] Update Type.kt with Inter + Outfit fonts
+- [x] Update Theme.kt with custom color scheme
 
 ## Phase 2: Data Models & Network Layer
 - [x] Create Post.kt data model
@@ -33,22 +33,22 @@
 - [x] Create ProfileScreen.kt
 
 ## Phase 8: Navigation
-- [ ] Update NavigationKeys.kt
-- [ ] Update Navigation.kt
+- [x] Update NavigationKeys.kt
+- [x] Update Navigation.kt
 
 ## Phase 9: Build Configuration
-- [ ] Update libs.versions.toml (add dependencies)
-- [ ] Update app/build.gradle.kts (add deps + buildConfig)
-- [ ] Update AndroidManifest.xml (INTERNET permission)
+- [x] Update libs.versions.toml (add dependencies)
+- [x] Update app/build.gradle.kts (add deps + buildConfig)
+- [x] Update AndroidManifest.xml (INTERNET permission)
 
 ## Phase 10: Backend
-- [ ] Create Apps Script backend (Code.gs + setup instructions)
-- [ ] Create Vercel proxy (feed.ts, post.ts, delete.ts, config)
+- [x] Create Apps Script backend (Code.gs + setup instructions)
+- [x] Create Vercel proxy (feed.ts, post.ts, delete.ts, config)
 
 ## Phase 11: CI/CD
-- [ ] Create GitHub Actions release workflow
-- [ ] Create GitHub Actions build workflow
+- [x] Create GitHub Actions release workflow
+- [x] Create GitHub Actions build workflow
 
 ## Phase 12: Web Landing Page
-- [ ] Create docs/index.html
-- [ ] Create docs/style.css
+- [x] Create docs/index.html
+- [x] Create docs/style.css

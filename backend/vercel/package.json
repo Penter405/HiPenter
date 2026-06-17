@@ -1,0 +1,13 @@
+{
+  "name": "hipenter-proxy",
+  "version": "1.0.0",
+  "description": "Vercel proxy for HiPenter to rate-limit and cache Google Apps Script calls",
+  "scripts": {
+    "start": "node api/feed.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/node": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
